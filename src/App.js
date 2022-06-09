@@ -1,10 +1,15 @@
-import Main from './pages/main';
-import Currency from './pages/currencies';
-import Price from './pages/price';
+
+
+import Main from './pages/Main';
+import Currencies from './pages/Currencies';
+import Price from './pages/Price';
+import Nav from './components/Nav';
+
+//commponent libraries
 
 import { Route } from 'react-router-dom';
 
-
+//styles
 import './App.css';
 
 
@@ -12,16 +17,17 @@ import './App.css';
 function App() {
   return (
    <div className="App">
-   <Route>
-     Main
+     <Nav />
+   <Route exact path="/">
+     <Main />
    </Route>
-   <Route>
-     Price
+   <Route path="/currencies">
+     <Currencies />
    </Route>
-   <Route>
-     Currencies
+   <Route path="/price/:symbol">
+     <Price />
    </Route>
-  
+   
   </div>
   );
 }
