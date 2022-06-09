@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router} from 'react-router-dom';
+
+//Hier order Component AKA HOC
+
+// highr order function take function as argument
+
+// Just like hier order funtion, they take components as arguments
+
+// name imports are disigned to allow for multiple imports from a single statement
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Router>
     <App />
+    </Router>
   </React.StrictMode>
 );
 
